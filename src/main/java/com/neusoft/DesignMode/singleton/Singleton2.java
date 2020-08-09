@@ -4,10 +4,14 @@ package com.neusoft.DesignMode.singleton;
  * 设计模式
  *      单例模式
  *          懒汉式
+ * @author lichu
  */
 public class Singleton2 {
 
-    private static volatile Singleton2 singleton;   // volatile保证线程之间的可见性，CPU高速缓存刷新
+    /**
+     * volatile保证线程之间的可见性，CPU高速缓存刷新
+     */
+    private static volatile Singleton2 singleton;
 
     private Singleton2() {
 
