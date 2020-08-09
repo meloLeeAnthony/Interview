@@ -12,7 +12,7 @@ public class Singleton3 {
     }
 
     private Singleton3() {
-
+        System.out.println("test");
     }
 
     public static Singleton3 getInstance() {
