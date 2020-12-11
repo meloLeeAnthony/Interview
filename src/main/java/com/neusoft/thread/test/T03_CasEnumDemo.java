@@ -5,7 +5,7 @@ package com.neusoft.thread.test;
  */
 public class T03_CasEnumDemo {
 
-    enum Signal {numberThread,letterThread}
+    enum Signal {numberThread, letterThread}
 
     static Thread numberThread = null, letterThread = null;
 
@@ -17,7 +17,8 @@ public class T03_CasEnumDemo {
 
         numberThread = new Thread(() -> {
             for (char number : numbers) {
-                while(readyToRunThread != Signal.numberThread) { }
+                while (readyToRunThread != Signal.numberThread) {
+                }
 
                 System.out.print(number);
 
@@ -27,7 +28,8 @@ public class T03_CasEnumDemo {
 
         letterThread = new Thread(() -> {
             for (char letter : letters) {
-                while(readyToRunThread != Signal.letterThread) { }
+                while (readyToRunThread != Signal.letterThread) {
+                }
 
                 System.out.print(letter);
 
